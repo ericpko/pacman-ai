@@ -1,0 +1,52 @@
+Useful commands to run Pacman
+
+- Standard usage
+python3 pacman.py -z 3
+
+
+- Specify different AI strategies
+python3 pacman.py -p GreedyAgent -z 2
+python3 pacman.py -p ReflexAgent -z 2
+python3 pacman.py -p MinimaxAgent -z 2
+python3 pacman.py -p AlphaBetaAgent -z 2
+python3 pacman.py -p ExpectimaxAgent -z 2
+
+
+- Use -l for different maps:
+    eg) python3 pacman.py -l capsuleClassic
+    – minimaxClassic
+    – trappedClassic
+    – testClassic
+    – smallClassic
+    – capsuleClassic
+    – openClassic
+    – contestClassic
+    – mediumClassic
+    – originalClassic
+
+
+
+- For testing many games with no graphics
+python3 pacman.py -p GreedyAgent -l contestClassic -n 100 -k 2 -g DirectionalGhost -q
+
+
+
+- Autograder tests
+python3 autograder.py
+
+
+
+
+
+
+Notes:
+If the randomness (of ghosts) is preventing you from telling whether your agent is improving,
+you can use -f to run with a fixed random seed (same random choices every game).
+
+
+
+
+Question 1 tests:
+python3 pacman.py -p ReflexAgent -l testClassic -z 3
+python3 pacman.py -p ReflexAgent -l testClassic -n 100 -q
+python3 pacman.py -p ReflexAgent -l testClassic -g DirectionalGhost -z 3
